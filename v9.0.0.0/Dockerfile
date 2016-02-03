@@ -8,7 +8,7 @@
 FROM ubuntu
 
 # File Author / Maintainer
-MAINTAINER Sunil Dandamudi  sdandamu@us.ibm.com
+MAINTAINER Sunil Dandamudi
 
 # Update the repository sources list
 RUN apt-get update
