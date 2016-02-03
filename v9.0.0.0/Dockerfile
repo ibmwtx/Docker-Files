@@ -35,7 +35,7 @@ ENV  TXINSTALLS_NOENABLEGPFS=1
 ################## COPY INSTALLATION ARTIFACTS INCLUDING CREATION OF A WTX USER ######################
 COPY wsdtxl_9000_linux_64.tar  /home/ec2-user/bvt9000_64/installs/
 
-ADD install_wtx.sh /home/ec2-user/temp/
+ADD install.sh /home/ec2-user/temp/
 
 ADD adduser_wtx.sh /home/ec2-user/temp/
 
@@ -45,7 +45,7 @@ WORKDIR /home/ec2-user/temp
 
 RUN /bin/ksh /home/ec2-user/temp/adduser_wtx.sh
 
-RUN su wtx /home/ec2-user/temp/install_wtx.sh
+RUN su wtx /home/ec2-user/temp/install.sh
 
 
 ################## CLEANUP ######################
