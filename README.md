@@ -6,12 +6,10 @@ The Pre-req : Install.sh file (https://github.com/ibmwtx/Unix-Installation-Scrip
 
 Steps to create a docker image : 
 
-  - docker yum install
+   * docker yum install
 
-  - service docker start
+   * service docker start
 
-  - sudo docker info
-
-  -  docker build -t itx/launcherimage
+   * docker build -t itx/launcherimage
 
 The Dockerfile, install.sh, adduser_wtx.sh and the installation tar file must be present under the same directory
