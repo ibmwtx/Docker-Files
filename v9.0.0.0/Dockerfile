@@ -35,7 +35,7 @@ ENV  TXINSTALLS_NOENABLEGPFS=1
 
 COPY wsdtxcs_8412_linux_64.tar  /home/ec2-user/bvt8412_64/installs/
 
-ADD install_wtx.sh /home/ec2-user/temp/
+ADD install.sh /home/ec2-user/temp/
 
 ADD adduser_wtx.sh /home/ec2-user/temp/
 
@@ -43,7 +43,7 @@ WORKDIR /home/ec2-user/temp
 
 RUN /bin/ksh /home/ec2-user/temp/adduser_wtx.sh
 
-RUN su wtx /home/ec2-user/temp/install_wtx.sh
+RUN su wtx /home/ec2-user/temp/install.sh
 
 RUN rm -rf /home/ec2-user/temp
 
