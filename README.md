@@ -4,7 +4,7 @@ The project contains example docker files to create Docker images for launcher. 
 
 The Pre-req : Install.sh file (https://github.com/ibmwtx/Unix-Installation-Scripts)
 
-Steps to create docker image : 
+Steps to create a docker image : 
 
   - docker yum install
 
