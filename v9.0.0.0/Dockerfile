@@ -62,6 +62,30 @@ ADD run.sh  /home/ec2-user/
 
 WORKDIR /home/ec2-user/bvt9000_64/wtx_9000
 
+# Users need to add their MSL and maps here
+#**********************************************************
+ADD docker.msl  /home/ec2-user/bvt9000_64/wtx_9000/systems/
+
+ADD docker.mmc /home/ec2-user/
+
+#*********************************************************
+
+# Users need to update thier launcher.sh file and copy to the image
+#****************************************************************
+ADD launcher.sh /home/ec2-user/bvt9000_64/wtx_9000/bin/
+
+RUN chmod -R 777 /home/ec2-user/bvt9000_64/wtx_9000/bin/launcher.sh
+
+#*******************************************************************
+
+EXPOSE 7001
+EXPOSE 7002
+EXPOSE 7003
+EXPOSE 5015
+EXPOSE 5016
+EXPOSE 4634
+EXPOSE 4635
+
 ################## START THE LAUNCHER ######################
 
 CMD ["/bin/ksh" , "/home/ec2-user/run.sh" ]
